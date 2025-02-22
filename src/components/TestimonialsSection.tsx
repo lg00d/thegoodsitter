@@ -22,7 +22,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#6E59A5] to-[#8B5CF6]">
+    <section className="py-20 bg-gradient-to-b from-[#FFA07A] to-[#F97316]">
       <div className="container px-4 mx-auto">
         <div className="max-w-xl mx-auto mb-12 text-center animate-fade-in">
           <h2 className="mb-4 text-3xl font-bold text-white">

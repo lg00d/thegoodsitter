@@ -7,7 +7,7 @@ import { PawPrint } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#8B5CF6] to-[#6E59A5]" id="contact">
+    <section className="py-20 bg-gradient-to-b from-[#F97316] to-[#FF8C4B]" id="contact">
       <div className="container px-4 mx-auto">
         <div className="max-w-xl mx-auto mb-12 text-center animate-fade-in">
           <h2 className="mb-4 text-3xl font-bold text-white">
