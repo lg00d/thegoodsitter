@@ -17,11 +17,11 @@ const HeroSection = () => {
           <Cat className="w-16 h-16 text-white/40" />
         </div>
         
-        {/* Right side pets */}
-        <div className="absolute top-32 right-24">
+        {/* Right side pets - adjusted positioning */}
+        <div className="absolute top-24 right-32">
           <Cat className="w-16 h-16 text-white/40" />
         </div>
-        <div className="absolute top-60 right-12">
+        <div className="absolute top-48 right-16">
           <PawPrint className="w-10 h-10 text-white/30" />
         </div>
         <div className="absolute bottom-20 right-20">
@@ -32,7 +32,7 @@ const HeroSection = () => {
         <div className="absolute bottom-12 left-32">
           <PawPrint className="w-10 h-10 text-white/30" />
         </div>
-        <div className="absolute top-24 right-36">
+        <div className="absolute top-16 right-48">
           <PawPrint className="w-10 h-10 text-white/30" />
         </div>
       </div>
