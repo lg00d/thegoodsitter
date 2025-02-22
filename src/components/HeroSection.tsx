@@ -13,27 +13,36 @@ const HeroSection = () => {
         <div className="absolute top-48 left-24">
           <PawPrint className="w-10 h-10 text-white/30" />
         </div>
+        <div className="absolute top-32 left-48">
+          <Cat className="w-14 h-14 text-white/35" />
+        </div>
         <div className="absolute bottom-32 left-16">
           <Cat className="w-16 h-16 text-white/40" />
         </div>
+        <div className="absolute bottom-48 left-40">
+          <PawPrint className="w-12 h-12 text-white/35" />
+        </div>
         
-        {/* Right side pets - adjusted positioning */}
+        {/* Right side pets - evenly spaced */}
         <div className="absolute top-24 right-32">
           <Cat className="w-16 h-16 text-white/40" />
         </div>
         <div className="absolute top-48 right-16">
           <PawPrint className="w-10 h-10 text-white/30" />
         </div>
+        <div className="absolute top-36 right-56">
+          <Dog className="w-14 h-14 text-white/35" />
+        </div>
         <div className="absolute bottom-20 right-20">
           <Dog className="w-16 h-16 text-white/40" />
         </div>
-
-        {/* Additional paw prints */}
-        <div className="absolute bottom-12 left-32">
-          <PawPrint className="w-10 h-10 text-white/30" />
+        <div className="absolute bottom-44 right-40">
+          <PawPrint className="w-12 h-12 text-white/35" />
         </div>
-        <div className="absolute top-16 right-48">
-          <PawPrint className="w-10 h-10 text-white/30" />
+
+        {/* Center decorative elements */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10">
+          <Heart className="w-48 h-48 text-[#FFA885]" />
         </div>
       </div>
       <div className="container px-4 mx-auto text-center">
