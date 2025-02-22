@@ -1,4 +1,3 @@
-
 import { Heart, Home, Baby } from "lucide-react";
 import { Card } from "./ui/card";
 
@@ -22,7 +21,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-20 bg-white" id="services">
+    <section className="py-20 bg-gradient-to-b from-white to-secondary/20" id="services">
       <div className="container px-4 mx-auto">
         <div className="max-w-xl mx-auto mb-12 text-center animate-fade-in">
           <h2 className="mb-4 text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
