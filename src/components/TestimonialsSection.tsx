@@ -24,10 +24,10 @@ const TestimonialsSection = () => {
     <section className="py-20 bg-gradient-to-b from-[#FFA885] to-[#FFB499]">
       <div className="container px-4 mx-auto">
         <div className="max-w-xl mx-auto mb-12 text-center animate-fade-in">
-          <h2 className="mb-4 text-3xl font-bold text-white">
+          <h2 className="mb-4 text-3xl font-bold text-[#333333]">
             What Pet Parents Say
           </h2>
-          <p className="text-white/80">
+          <p className="text-gray-700">
             Don't just take our word for it - hear from our happy clients
           </p>
         </div>

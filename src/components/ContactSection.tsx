@@ -9,10 +9,10 @@ const ContactSection = () => {
     <section className="py-20 bg-gradient-to-b from-[#FFB499] to-[#FFA885]" id="contact">
       <div className="container px-4 mx-auto">
         <div className="max-w-xl mx-auto mb-12 text-center animate-fade-in">
-          <h2 className="mb-4 text-3xl font-bold text-white">
+          <h2 className="mb-4 text-3xl font-bold text-[#333333]">
             Get in Touch
           </h2>
-          <p className="text-white/80">
+          <p className="text-gray-700">
             Ready to ensure your pets get the best care? Contact us today!
           </p>
         </div>

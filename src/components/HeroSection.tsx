@@ -18,10 +18,10 @@ const HeroSection = () => {
           <PawPrint size={16} className="text-[#FFA885] animate-paw-print" />
           <span className="text-sm font-medium text-gray-800">Trusted Pet Care Services</span>
         </div>
-        <h1 className="max-w-3xl mx-auto mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-white">
+        <h1 className="max-w-3xl mx-auto mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-[#333333]">
           Your pets deserve the very best care
         </h1>
-        <p className="max-w-xl mx-auto mb-8 text-lg text-white/90">
+        <p className="max-w-xl mx-auto mb-8 text-lg text-gray-700">
           Professional, loving care for your furry family members when you're away. Available 24/7 for your peace of mind.
         </p>
         <Button 
