@@ -42,7 +42,7 @@ const HeroSection = () => {
           Your pets deserve the very best care
         </h1>
         <p className="max-w-xl mx-auto mb-8 text-lg text-gray-700">
-          Professional, loving care for your furry and finned family members. 
+          Professional, loving care for your furry family members. 
           We treat every pet like our own, providing 24/7 attention and care.
         </p>
         <div className="flex items-center justify-center gap-2 mb-8">
