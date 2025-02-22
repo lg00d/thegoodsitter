@@ -21,7 +21,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#FDE1D3] to-white" id="services">
+    <section className="py-20 bg-gradient-to-b from-[#FFB499] to-white" id="services">
       <div className="container px-4 mx-auto">
         <div className="max-w-xl mx-auto mb-12 text-center animate-fade-in">
           <h2 className="mb-4 text-3xl font-bold text-white">
