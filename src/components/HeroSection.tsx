@@ -6,43 +6,43 @@ const HeroSection = () => {
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-[#FFA885] to-white overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        {/* Left side pets */}
-        <div className="absolute top-20 left-10">
+        {/* Left side pets - moved further out */}
+        <div className="absolute top-12 left-8">
           <Dog className="w-16 h-16 text-white/40" />
         </div>
-        <div className="absolute top-48 left-24">
+        <div className="absolute top-48 left-16">
           <PawPrint className="w-10 h-10 text-white/30" />
         </div>
-        <div className="absolute top-32 left-48">
+        <div className="absolute top-24 left-40">
           <Cat className="w-14 h-14 text-white/35" />
         </div>
-        <div className="absolute bottom-32 left-16">
+        <div className="absolute bottom-32 left-12">
           <Cat className="w-16 h-16 text-white/40" />
         </div>
-        <div className="absolute bottom-48 left-40">
+        <div className="absolute bottom-48 left-36">
           <PawPrint className="w-12 h-12 text-white/35" />
         </div>
         
-        {/* Right side pets - evenly spaced */}
-        <div className="absolute top-24 right-32">
+        {/* Right side pets - moved further out */}
+        <div className="absolute top-16 right-28">
           <Cat className="w-16 h-16 text-white/40" />
         </div>
-        <div className="absolute top-48 right-16">
+        <div className="absolute top-48 right-12">
           <PawPrint className="w-10 h-10 text-white/30" />
         </div>
-        <div className="absolute top-36 right-56">
+        <div className="absolute top-28 right-52">
           <Dog className="w-14 h-14 text-white/35" />
         </div>
-        <div className="absolute bottom-20 right-20">
+        <div className="absolute bottom-20 right-16">
           <Dog className="w-16 h-16 text-white/40" />
         </div>
-        <div className="absolute bottom-44 right-40">
+        <div className="absolute bottom-44 right-36">
           <PawPrint className="w-12 h-12 text-white/35" />
         </div>
 
-        {/* Center decorative elements */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10">
-          <Heart className="w-48 h-48 text-[#FFA885]" />
+        {/* Center decorative elements - reduced size and opacity */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5">
+          <Heart className="w-40 h-40 text-[#FFA885]" />
         </div>
       </div>
       <div className="container px-4 mx-auto text-center">
