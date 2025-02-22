@@ -4,24 +4,24 @@ import { Button } from "./ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-[#FDE1D3] to-white overflow-hidden">
+    <div className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-[#8B5CF6] to-white overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 animate-bounce-slight">
-          <Dog className="w-12 h-12 text-primary/30" />
+          <Dog className="w-12 h-12 text-white/30" />
         </div>
         <div className="absolute bottom-20 right-10 animate-bounce-slight" style={{ animationDelay: "1s" }}>
-          <Cat className="w-12 h-12 text-primary/30" />
+          <Cat className="w-12 h-12 text-white/30" />
         </div>
       </div>
       <div className="container px-4 mx-auto text-center animate-fade-in">
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
           <PawPrint size={16} className="text-primary animate-paw-print" />
-          <span className="text-sm font-medium">Trusted Pet Care Services</span>
+          <span className="text-sm font-medium text-gray-800">Trusted Pet Care Services</span>
         </div>
-        <h1 className="max-w-3xl mx-auto mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <h1 className="max-w-3xl mx-auto mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-white">
           Your pets deserve the very best care
         </h1>
-        <p className="max-w-xl mx-auto mb-8 text-lg text-muted-foreground">
+        <p className="max-w-xl mx-auto mb-8 text-lg text-white/90">
           Professional, loving care for your furry family members when you're away. Available 24/7 for your peace of mind.
         </p>
         <Button 

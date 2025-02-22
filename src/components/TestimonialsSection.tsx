@@ -22,13 +22,13 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-secondary/20 to-white">
+    <section className="py-20 bg-gradient-to-b from-[#6E59A5] to-[#8B5CF6]">
       <div className="container px-4 mx-auto">
         <div className="max-w-xl mx-auto mb-12 text-center animate-fade-in">
-          <h2 className="mb-4 text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="mb-4 text-3xl font-bold text-white">
             What Pet Parents Say
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-white/80">
             Don't just take our word for it - hear from our happy clients
           </p>
         </div>
@@ -36,15 +36,15 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in bg-white/80 backdrop-blur-sm"
+              className="p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in bg-white/90 backdrop-blur-sm"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="flex flex-col h-full">
                 <PawPrint className="w-6 h-6 mb-4 text-primary animate-wag" style={{ animationDelay: `${index * 200}ms` }} />
-                <p className="flex-1 mb-4 italic text-muted-foreground">"{testimonial.text}"</p>
+                <p className="flex-1 mb-4 italic text-gray-600">"{testimonial.text}"</p>
                 <div>
-                  <p className="font-semibold">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  <p className="font-semibold text-gray-800">{testimonial.author}</p>
+                  <p className="text-sm text-gray-600">{testimonial.role}</p>
                 </div>
               </div>
             </Card>

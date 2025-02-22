@@ -7,17 +7,17 @@ import { PawPrint } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-accent/20" id="contact">
+    <section className="py-20 bg-gradient-to-b from-[#8B5CF6] to-[#6E59A5]" id="contact">
       <div className="container px-4 mx-auto">
         <div className="max-w-xl mx-auto mb-12 text-center animate-fade-in">
-          <h2 className="mb-4 text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="mb-4 text-3xl font-bold text-white">
             Get in Touch
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-white/80">
             Ready to ensure your pets get the best care? Contact us today!
           </p>
         </div>
-        <Card className="max-w-md p-6 mx-auto animate-fade-in bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
+        <Card className="max-w-md p-6 mx-auto animate-fade-in bg-white/90 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
           <form className="space-y-4">
             <div className="flex justify-center mb-6">
               <PawPrint className="w-8 h-8 text-primary animate-paw-print" />
