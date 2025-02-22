@@ -4,17 +4,17 @@ import { Card } from "./ui/card";
 
 const services = [
   {
-    icon: <Heart className="w-10 h-10 text-primary" />,
+    icon: <Heart className="w-10 h-10 text-primary animate-paw-print" />,
     title: "Pet Sitting",
     description: "In-home care and attention for your pets while you're away",
   },
   {
-    icon: <Home className="w-10 h-10 text-primary" />,
+    icon: <Home className="w-10 h-10 text-primary animate-paw-print" style={{ animationDelay: "0.3s" }} />,
     title: "House Visits",
     description: "Regular check-ins and care at your home throughout the day",
   },
   {
-    icon: <Baby className="w-10 h-10 text-primary" />,
+    icon: <Baby className="w-10 h-10 text-primary animate-paw-print" style={{ animationDelay: "0.6s" }} />,
     title: "Puppy Care",
     description: "Special attention and training for your young pets",
   },
@@ -25,16 +25,24 @@ const ServicesSection = () => {
     <section className="py-20 bg-white" id="services">
       <div className="container px-4 mx-auto">
         <div className="max-w-xl mx-auto mb-12 text-center animate-fade-in">
-          <h2 className="mb-4 text-3xl font-bold">Our Services</h2>
+          <h2 className="mb-4 text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Our Services
+          </h2>
           <p className="text-muted-foreground">
             Comprehensive pet care services tailored to your needs
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {services.map((service, index) => (
-            <Card key={index} className="p-6 transition-all duration-300 hover:shadow-lg animate-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
+            <Card 
+              key={index} 
+              className="p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in group bg-gradient-to-b from-white to-accent/5" 
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
               <div className="flex flex-col items-center text-center">
-                <div className="mb-4">{service.icon}</div>
+                <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </div>
                 <h3 className="mb-2 text-xl font-semibold">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
               </div>

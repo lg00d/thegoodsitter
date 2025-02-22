@@ -51,10 +51,26 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "bounce-slight": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "wag": {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(20deg)" },
+        },
+        "paw-print": {
+          "0%": { transform: "scale(1) rotate(0deg)" },
+          "50%": { transform: "scale(1.2) rotate(5deg)" },
+          "100%": { transform: "scale(1) rotate(0deg)" },
+        }
       },
       animation: {
         "fade-in": "fade-in 0.6s ease-out",
         "fade-in-slow": "fade-in-slow 0.8s ease-out",
+        "bounce-slight": "bounce-slight 3s ease-in-out infinite",
+        "wag": "wag 1s ease-in-out infinite",
+        "paw-print": "paw-print 2s ease-in-out infinite",
       },
     },
   },
