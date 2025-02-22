@@ -16,7 +16,7 @@ const HeroSection = () => {
       <div className="container px-4 mx-auto text-center animate-fade-in">
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
           <PawPrint size={16} className="text-[#FFA885] animate-paw-print" />
-          <span className="text-sm font-medium text-gray-800">Trusted Pet Care Services</span>
+          <span className="text-sm font-medium text-gray-800">The Good Sitter</span>
         </div>
         <h1 className="max-w-3xl mx-auto mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-white">
           Your pets deserve the very best care
