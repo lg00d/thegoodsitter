@@ -43,12 +43,11 @@ const services = [
   }
 ];
 
-const ServiceCard = ({ service, index }) => {
-  const [showDetails, setShowDetails] = useState(false);
+const ServiceCard = ({ service, index, expandedIndex, setExpandedIndex }) => {
+  const isExpanded = expandedIndex === index;
   
   return (
     <Card 
-      key={index} 
       className="p-5 sm:p-6 transition-all duration-300 hover:shadow-lg bg-white/90 backdrop-blur-sm relative overflow-hidden"
     >
       <div className="flex flex-col items-center text-center">
@@ -62,9 +61,9 @@ const ServiceCard = ({ service, index }) => {
           variant="ghost" 
           size="sm" 
           className="text-[#6BA5E7] hover:text-[#FFA885] hover:bg-[#F1F0FB] transition-all"
-          onClick={() => setShowDetails(!showDetails)}
+          onClick={() => setExpandedIndex(isExpanded ? null : index)}
         >
-          {showDetails ? (
+          {isExpanded ? (
             <>
               Less Details <ChevronUp className="ml-1 h-4 w-4" />
             </>
@@ -75,7 +74,7 @@ const ServiceCard = ({ service, index }) => {
           )}
         </Button>
         
-        <div className={`mt-4 overflow-hidden transition-all duration-300 w-full ${showDetails ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className={`mt-4 overflow-hidden transition-all duration-300 w-full ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="pt-4 border-t border-gray-200">
             <h4 className="font-medium text-gray-800 mb-2">What we offer:</h4>
             <ul className="text-sm text-left space-y-2">
@@ -94,6 +93,8 @@ const ServiceCard = ({ service, index }) => {
 };
 
 const ServicesSection = () => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+  
   return (
     <section className="py-16 sm:py-20" id="services">
       <div className="container px-4 mx-auto">
@@ -107,7 +108,13 @@ const ServicesSection = () => {
         </div>
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <ServiceCard key={index} service={service} index={index} />
+            <ServiceCard 
+              key={index} 
+              service={service} 
+              index={index}
+              expandedIndex={expandedIndex}
+              setExpandedIndex={setExpandedIndex}
+            />
           ))}
         </div>
       </div>
