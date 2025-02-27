@@ -1,3 +1,4 @@
+
 import { Card } from "./ui/card";
 import { PawPrint } from "lucide-react";
 
@@ -21,7 +22,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#FFA885] to-[#FFB499]">
+    <section className="py-20" id="testimonials">
       <div className="container px-4 mx-auto">
         <div className="max-w-xl mx-auto mb-12 text-center animate-fade-in">
           <h2 className="mb-4 text-3xl font-bold text-[#333333]">

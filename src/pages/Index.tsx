@@ -6,7 +6,7 @@ import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen flex flex-col">
       <HeroSection />
       <ServicesSection />
       <TestimonialsSection />
