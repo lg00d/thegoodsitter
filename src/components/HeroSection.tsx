@@ -46,10 +46,6 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="container px-4 mx-auto text-center">
-        <div className="inline-flex items-center gap-3 px-6 py-3 mb-8 rounded-full bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
-          <PawPrint size={24} className="text-[#FFA885]" />
-          <span className="text-lg font-semibold text-gray-800">The Good Sitter</span>
-        </div>
         <h1 className="max-w-3xl mx-auto mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-white">
           Your pets deserve the very best care
         </h1>
