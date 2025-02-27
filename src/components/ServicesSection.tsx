@@ -1,6 +1,8 @@
 
 import { Heart, Home, Baby } from "lucide-react";
 import { Card } from "./ui/card";
+import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -48,6 +50,15 @@ const ServicesSection = () => {
               </div>
             </Card>
           ))}
+        </div>
+        <div className="mt-12 text-center">
+          <Link to="/services">
+            <Button 
+              className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              View All Services
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
