@@ -10,11 +10,11 @@ const services = [
     title: "Pet Stop",
     description: "30 minute check-ins and care at your home throughout the day",
     details: [
-      "Feeding & Water",
-      "Potty Stop",
-      "Brief walk or playtime",
-      "Medication administration - if needed",
-      "Status updates with photos"
+      "Feeding and water refreshment",
+      "Brief walks or playtime",
+      "Medication administration if needed",
+      "Status updates with photos",
+      "Mail collection and plant watering"
     ]
   },
   {
@@ -102,10 +102,10 @@ const ServiceCard = ({ service, isExpanded, toggleExpand }: ServiceCardProps) =>
 };
 
 const ServicesSection = () => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
   
-  const toggleExpand = (index: number) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
   };
   
   return (
@@ -124,8 +124,8 @@ const ServicesSection = () => {
             <ServiceCard 
               key={index} 
               service={service} 
-              isExpanded={expandedIndex === index}
-              toggleExpand={() => toggleExpand(index)}
+              isExpanded={isExpanded}
+              toggleExpand={toggleExpand}
             />
           ))}
         </div>
