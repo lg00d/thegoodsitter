@@ -20,6 +20,8 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background: linear-gradient(to bottom, #FFA885 0%, white 100%);
+    background-attachment: fixed;
   }
 }
 

@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-[#FFA885] to-white overflow-hidden">
+    <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         {/* Left side pets - moved further out */}
         <div className="absolute top-12 left-8">
