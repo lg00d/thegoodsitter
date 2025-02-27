@@ -1,8 +1,6 @@
 
-import { Heart, Home, Baby } from "lucide-react";
+import { Heart, Home, Baby, Cat, Clock, Leaf } from "lucide-react";
 import { Card } from "./ui/card";
-import { Button } from "./ui/button";
-import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -20,6 +18,21 @@ const services = [
     title: "Puppy Care",
     description: "Special attention and training for your young pets",
   },
+  {
+    icon: <Cat className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
+    title: "Feeding & Medication",
+    description: "Precise feeding schedules and medication administration",
+  },
+  {
+    icon: <Clock className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
+    title: "Overnight Care",
+    description: "Extended stays and overnight pet sitting in your home",
+  },
+  {
+    icon: <Leaf className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
+    title: "Exotic Pet Care",
+    description: "Specialized care for reptiles, birds, and small mammals",
+  }
 ];
 
 const ServicesSection = () => {
@@ -34,7 +47,7 @@ const ServicesSection = () => {
             Comprehensive pet care services tailored to your needs
           </p>
         </div>
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <Card 
               key={index} 
@@ -49,15 +62,6 @@ const ServicesSection = () => {
               </div>
             </Card>
           ))}
-        </div>
-        <div className="mt-10 sm:mt-12 text-center">
-          <Link to="/services">
-            <Button 
-              className="rounded-full px-5 py-2 sm:px-6 sm:py-3"
-            >
-              View All Services
-            </Button>
-          </Link>
         </div>
       </div>
     </section>

@@ -20,13 +20,13 @@ const Navigation = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
-          <Link to="/services" className="text-gray-700 hover:text-[#FFA885] transition-colors">
+          <a href="#services" className="text-gray-700 hover:text-[#FFA885] transition-colors">
             Services
-          </Link>
-          <a href="/#testimonials" className="text-gray-700 hover:text-[#FFA885] transition-colors">
+          </a>
+          <a href="#testimonials" className="text-gray-700 hover:text-[#FFA885] transition-colors">
             Testimonials
           </a>
-          <a href="/#contact" className="text-gray-700 hover:text-[#FFA885] transition-colors">
+          <a href="#contact" className="text-gray-700 hover:text-[#FFA885] transition-colors">
             Contact
           </a>
         </div>
@@ -49,22 +49,22 @@ const Navigation = () => {
       {isMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white shadow-md py-4 px-4 md:hidden animate-fade-in z-50">
           <div className="flex flex-col space-y-4">
-            <Link 
-              to="/services" 
+            <a 
+              href="#services" 
               className="text-gray-700 hover:text-[#FFA885] transition-colors py-2 px-4 rounded-md hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
-            </Link>
+            </a>
             <a 
-              href="/#testimonials" 
+              href="#testimonials" 
               className="text-gray-700 hover:text-[#FFA885] transition-colors py-2 px-4 rounded-md hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Testimonials
             </a>
             <a 
-              href="/#contact" 
+              href="#contact" 
               className="text-gray-700 hover:text-[#FFA885] transition-colors py-2 px-4 rounded-md hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
