@@ -102,10 +102,10 @@ const ServiceCard = ({ service, isExpanded, toggleExpand }: ServiceCardProps) =>
 };
 
 const ServicesSection = () => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
   
-  const toggleExpand = (index: number) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
   };
   
   return (
@@ -124,8 +124,8 @@ const ServicesSection = () => {
             <ServiceCard 
               key={index} 
               service={service} 
-              isExpanded={expandedIndex === index}
-              toggleExpand={() => toggleExpand(index)}
+              isExpanded={isExpanded}
+              toggleExpand={toggleExpand}
             />
           ))}
         </div>
