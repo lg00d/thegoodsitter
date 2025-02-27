@@ -6,7 +6,7 @@ const services = [
   {
     icon: <Heart className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "Pet Stop",
-    description: "Regular check-ins and care at your home throughout the day",
+    description: "Regular 30 minute check-ins and care at your home throughout the day",
   },
   {
     icon: <Home className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
