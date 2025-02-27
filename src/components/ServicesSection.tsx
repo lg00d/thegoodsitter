@@ -50,14 +50,11 @@ interface ServiceCardProps {
     description: string;
     details: string[];
   };
-  index: number;
-  expandedIndex: number | null;
-  setExpandedIndex: (index: number | null) => void;
+  isExpanded: boolean;
+  toggleExpand: () => void;
 }
 
-const ServiceCard = ({ service, index, expandedIndex, setExpandedIndex }: ServiceCardProps) => {
-  const isExpanded = expandedIndex === index;
-  
+const ServiceCard = ({ service, isExpanded, toggleExpand }: ServiceCardProps) => {
   return (
     <Card 
       className="p-5 sm:p-6 transition-all duration-300 hover:shadow-lg bg-white/90 backdrop-blur-sm relative overflow-hidden"
@@ -73,7 +70,7 @@ const ServiceCard = ({ service, index, expandedIndex, setExpandedIndex }: Servic
           variant="ghost" 
           size="sm" 
           className="text-[#6BA5E7] hover:text-[#FFA885] hover:bg-[#F1F0FB] transition-all"
-          onClick={() => setExpandedIndex(isExpanded ? null : index)}
+          onClick={toggleExpand}
         >
           {isExpanded ? (
             <>
@@ -105,7 +102,11 @@ const ServiceCard = ({ service, index, expandedIndex, setExpandedIndex }: Servic
 };
 
 const ServicesSection = () => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
   
   return (
     <section className="py-16 sm:py-20" id="services">
@@ -123,9 +124,8 @@ const ServicesSection = () => {
             <ServiceCard 
               key={index} 
               service={service} 
-              index={index}
-              expandedIndex={expandedIndex}
-              setExpandedIndex={setExpandedIndex}
+              isExpanded={isExpanded}
+              toggleExpand={toggleExpand}
             />
           ))}
         </div>
