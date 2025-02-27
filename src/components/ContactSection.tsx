@@ -29,6 +29,9 @@ const ContactSection = () => {
               <Input type="email" placeholder="Your Email" className="w-full transition-all duration-300 hover:shadow-md" />
             </div>
             <div>
+              <Input type="tel" placeholder="Your Phone Number" className="w-full transition-all duration-300 hover:shadow-md" />
+            </div>
+            <div>
               <Textarea placeholder="Your Message" className="w-full min-h-[120px] transition-all duration-300 hover:shadow-md" />
             </div>
             <Button className="w-full rounded-full hover:scale-105 transition-transform duration-300">
