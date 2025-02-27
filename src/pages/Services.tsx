@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 const allServices = [
   {
     icon: <Heart className="w-10 h-10 text-primary animate-paw-print" />,
-    title: "Pet Sitting",
+    title: "Pet Stop",
     description: "In-home care and attention for your pets while you're away"
   },
   {
