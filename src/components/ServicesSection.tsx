@@ -19,7 +19,7 @@ const services = [
   },
   {
     icon: <Home className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
-    title: "House Visits",
+    title: "House Sitting",
     description: "Overnight care at your home",
     details: [
       "Extended evening and morning care",
