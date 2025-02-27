@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="flex flex-col h-full">
-                <PawPrint className="w-6 h-6 mb-4 text-primary animate-wag" style={{ animationDelay: `${index * 200}ms` }} />
+                <PawPrint className="w-5 h-5 sm:w-6 sm:h-6 mb-4 text-primary opacity-80" style={{ animationDelay: `${index * 200}ms` }} />
                 <p className="flex-1 mb-4 italic text-gray-600">"{testimonial.text}"</p>
                 <div>
                   <p className="font-semibold text-gray-800">{testimonial.author}</p>

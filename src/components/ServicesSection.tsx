@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: <Heart className="w-8 h-8 text-[#6BA5E7]" />,
+    icon: <Heart className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "Pet Stop",
     description: "In-home care and attention for your pets while you're away",
   },
   {
-    icon: <Home className="w-8 h-8 text-[#6BA5E7]" />,
+    icon: <Home className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "House Visits",
     description: "Regular check-ins and care at your home throughout the day",
   },
   {
-    icon: <Baby className="w-8 h-8 text-[#6BA5E7]" />,
+    icon: <Baby className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "Puppy Care",
     description: "Special attention and training for your young pets",
   },
