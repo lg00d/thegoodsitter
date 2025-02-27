@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: <Heart className="w-8 h-8 text-[#6BA5E7]" />,
-    title: "Pet Stop",
+    icon: <Heart className="w-10 h-10 text-primary animate-paw-print" />,
+    title: "Pet Sitting",
     description: "In-home care and attention for your pets while you're away",
   },
   {
-    icon: <Home className="w-8 h-8 text-[#6BA5E7]" />,
+    icon: <Home className="w-10 h-10 text-primary animate-paw-print" style={{ animationDelay: "0.3s" }} />,
     title: "House Visits",
     description: "Regular check-ins and care at your home throughout the day",
   },
   {
-    icon: <Baby className="w-8 h-8 text-[#6BA5E7]" />,
+    icon: <Baby className="w-10 h-10 text-primary animate-paw-print" style={{ animationDelay: "0.6s" }} />,
     title: "Puppy Care",
     description: "Special attention and training for your young pets",
   },
@@ -24,36 +24,37 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-16 sm:py-20" id="services">
+    <section className="py-20" id="services">
       <div className="container px-4 mx-auto">
-        <div className="max-w-xl mx-auto mb-8 sm:mb-12 text-center">
-          <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl font-bold text-[#333333]">
+        <div className="max-w-xl mx-auto mb-12 text-center animate-fade-in">
+          <h2 className="mb-4 text-3xl font-bold text-[#333333]">
             Our Services
           </h2>
           <p className="text-gray-700">
             Comprehensive pet care services tailored to your needs
           </p>
         </div>
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="p-5 sm:p-6 transition-all duration-300 hover:shadow-lg bg-white/90 backdrop-blur-sm" 
+              className="p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in group bg-white/90 backdrop-blur-sm" 
+              style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="flex flex-col items-center text-center">
-                <div className="p-3 mb-4 rounded-full bg-[#F1F0FB]">
+                <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h3 className="mb-2 text-lg sm:text-xl font-semibold text-gray-800">{service.title}</h3>
-                <p className="text-sm sm:text-base text-gray-600">{service.description}</p>
+                <h3 className="mb-2 text-xl font-semibold text-gray-800">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
               </div>
             </Card>
           ))}
         </div>
-        <div className="mt-10 sm:mt-12 text-center">
+        <div className="mt-12 text-center">
           <Link to="/services">
             <Button 
-              className="rounded-full px-5 py-2 sm:px-6 sm:py-3"
+              className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               View All Services
             </Button>
