@@ -43,7 +43,19 @@ const services = [
   }
 ];
 
-const ServiceCard = ({ service, index, expandedIndex, setExpandedIndex }) => {
+interface ServiceCardProps {
+  service: {
+    icon: JSX.Element;
+    title: string;
+    description: string;
+    details: string[];
+  };
+  index: number;
+  expandedIndex: number | null;
+  setExpandedIndex: (index: number | null) => void;
+}
+
+const ServiceCard = ({ service, index, expandedIndex, setExpandedIndex }: ServiceCardProps) => {
   const isExpanded = expandedIndex === index;
   
   return (
@@ -93,7 +105,7 @@ const ServiceCard = ({ service, index, expandedIndex, setExpandedIndex }) => {
 };
 
 const ServicesSection = () => {
-  const [expandedIndex, setExpandedIndex] = useState(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   
   return (
     <section className="py-16 sm:py-20" id="services">
