@@ -1,5 +1,5 @@
 
-import { Heart, Home, Baby, Cat, Clock, Leaf } from "lucide-react";
+import { Heart, Home, Leaf } from "lucide-react";
 import { Card } from "./ui/card";
 
 const services = [
@@ -12,21 +12,6 @@ const services = [
     icon: <Home className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "House Visits",
     description: "Overnight care at your home",
-  },
-  {
-    icon: <Baby className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
-    title: "Puppy Care",
-    description: "Special attention and training for your young pets",
-  },
-  {
-    icon: <Cat className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
-    title: "Feeding & Medication",
-    description: "Precise feeding schedules and medication administration",
-  },
-  {
-    icon: <Clock className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
-    title: "Overnight Care",
-    description: "Extended stays and overnight pet sitting in your home",
   },
   {
     icon: <Leaf className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
