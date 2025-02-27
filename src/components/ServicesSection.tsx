@@ -1,24 +1,97 @@
 
-import { Heart, Home, Leaf } from "lucide-react";
+import { useState } from "react";
+import { Heart, Home, Leaf, ChevronDown, ChevronUp } from "lucide-react";
 import { Card } from "./ui/card";
+import { Button } from "./ui/button";
 
 const services = [
   {
     icon: <Heart className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "Pet Stop",
     description: "30 minute check-ins and care at your home throughout the day",
+    details: [
+      "Feeding and water refreshment",
+      "Brief walks or playtime",
+      "Medication administration if needed",
+      "Status updates with photos",
+      "Mail collection and plant watering"
+    ]
   },
   {
     icon: <Home className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "House Visits",
     description: "Overnight care at your home",
+    details: [
+      "Extended evening and morning care",
+      "Feeding and exercise routines",
+      "House security checks",
+      "Overnight companionship for your pets",
+      "Daily updates and communication"
+    ]
   },
   {
     icon: <Leaf className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "Exotic Pet Care",
     description: "Specialized care for reptiles, birds, and small mammals",
+    details: [
+      "Species-specific handling and care",
+      "Proper environment maintenance",
+      "Specialized feeding protocols",
+      "Health monitoring for exotic species",
+      "Environment enrichment activities"
+    ]
   }
 ];
+
+const ServiceCard = ({ service, index }) => {
+  const [showDetails, setShowDetails] = useState(false);
+  
+  return (
+    <Card 
+      key={index} 
+      className="p-5 sm:p-6 transition-all duration-300 hover:shadow-lg bg-white/90 backdrop-blur-sm relative overflow-hidden"
+    >
+      <div className="flex flex-col items-center text-center">
+        <div className="p-3 mb-4 rounded-full bg-[#F1F0FB]">
+          {service.icon}
+        </div>
+        <h3 className="mb-2 text-lg sm:text-xl font-semibold text-gray-800">{service.title}</h3>
+        <p className="text-sm sm:text-base text-gray-600 mb-4">{service.description}</p>
+        
+        <Button 
+          variant="ghost" 
+          size="sm" 
+          className="text-[#6BA5E7] hover:text-[#FFA885] hover:bg-[#F1F0FB] transition-all"
+          onClick={() => setShowDetails(!showDetails)}
+        >
+          {showDetails ? (
+            <>
+              Less Details <ChevronUp className="ml-1 h-4 w-4" />
+            </>
+          ) : (
+            <>
+              More Details <ChevronDown className="ml-1 h-4 w-4" />
+            </>
+          )}
+        </Button>
+        
+        <div className={`mt-4 overflow-hidden transition-all duration-300 w-full ${showDetails ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="pt-4 border-t border-gray-200">
+            <h4 className="font-medium text-gray-800 mb-2">What we offer:</h4>
+            <ul className="text-sm text-left space-y-2">
+              {service.details.map((detail, i) => (
+                <li key={i} className="flex items-start">
+                  <span className="text-[#6BA5E7] mr-2">•</span>
+                  <span>{detail}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </Card>
+  );
+};
 
 const ServicesSection = () => {
   return (
@@ -34,18 +107,7 @@ const ServicesSection = () => {
         </div>
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className="p-5 sm:p-6 transition-all duration-300 hover:shadow-lg bg-white/90 backdrop-blur-sm" 
-            >
-              <div className="flex flex-col items-center text-center">
-                <div className="p-3 mb-4 rounded-full bg-[#F1F0FB]">
-                  {service.icon}
-                </div>
-                <h3 className="mb-2 text-lg sm:text-xl font-semibold text-gray-800">{service.title}</h3>
-                <p className="text-sm sm:text-base text-gray-600">{service.description}</p>
-              </div>
-            </Card>
+            <ServiceCard key={index} service={service} index={index} />
           ))}
         </div>
       </div>
