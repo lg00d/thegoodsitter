@@ -7,7 +7,7 @@ const allServices = [
   {
     icon: <Heart className="w-10 h-10 text-primary animate-paw-print" />,
     title: "Pet Sitting",
-    description: "In-home care and attention for your pets while you're away. We provide feeding, walks, playtime, medication administration, and lots of love and cuddles."
+    description: "In-home care and attention for your pets while you're away"
   },
   {
     icon: <Home className="w-10 h-10 text-primary animate-paw-print" style={{ animationDelay: "0.3s" }} />,
