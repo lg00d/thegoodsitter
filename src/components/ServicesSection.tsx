@@ -10,11 +10,11 @@ const services = [
     title: "Pet Stop",
     description: "30 minute check-ins and care at your home throughout the day",
     details: [
-      "Feeding and water refreshment",
-      "Brief walks or playtime",
+      "Feeding & water",
+      "Bathroom break",
+      "Brief walk or playtime",
       "Medication administration if needed",
-      "Status updates with photos",
-      "Mail collection and plant watering"
+      "Status updates with photos"
     ]
   },
   {
