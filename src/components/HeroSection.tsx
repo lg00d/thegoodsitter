@@ -42,7 +42,7 @@ const HeroSection = () => {
 
         {/* Center decorative elements - reduced size and opacity */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5">
-          <Heart className="w-40 h-40 text-[#FFA885]" />
+          <Heart className="w-40 h-40 text-[#F97316]" />
         </div>
       </div>
       <div className="container px-4 mx-auto text-center">
@@ -54,9 +54,9 @@ const HeroSection = () => {
           We treat every pet like our own, providing 24/7 attention and care.
         </p>
         <div className="flex items-center justify-center gap-4 mb-8">
-          <Dog className="w-8 h-8 text-[#FFA885]" />
-          <Heart className="w-8 h-8 text-[#FFA885]" />
-          <Cat className="w-8 h-8 text-[#FFA885]" />
+          <Dog className="w-8 h-8 text-[#F97316]" />
+          <Heart className="w-8 h-8 text-[#F97316]" />
+          <Cat className="w-8 h-8 text-[#F97316]" />
         </div>
         <Button 
           size="lg" 
