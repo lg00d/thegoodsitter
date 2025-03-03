@@ -13,7 +13,7 @@ const services = [
     rates: [
       "30 minutes - $24",
       "Full hour - $40",
-      "Additional pet - $5"
+      "+$5 - Additional pet"
     ],
     details: [
       "Feeding & Water",
@@ -30,7 +30,7 @@ const services = [
     pricing: "$25 for 30 min walk",
     rates: [
       "30 minutes - $25",
-      "Additional dog - $5"
+      "+$5 - Additional dog"
     ],
     details: [
       "Exercise and socialization",
@@ -48,9 +48,9 @@ const services = [
       "Standard rate - $100/night",
       "Holiday rate - $125/night",
       "Puppy rate - $115/night",
-      "Additional dog - $20",
+      "+$20 - Additional dog",
       "Cat care - $85/night",
-      "Additional cat - $5"
+      "+$5 - Additional cat"
     ],
     details: [
       "Extended evening and morning care",
