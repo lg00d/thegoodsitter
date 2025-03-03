@@ -10,6 +10,11 @@ const services = [
     title: "Pet Stop",
     description: "30 minute check-ins and care at your home throughout the day",
     pricing: "$24 for 30 mins, +$12 for full hour/extended time",
+    rates: [
+      "30 minutes - $24",
+      "Full hour - $36",
+      "Additional pet - $5"
+    ],
     details: [
       "Feeding & Water",
       "Potty Stop",
@@ -23,6 +28,9 @@ const services = [
     title: "House Sitting",
     description: "Overnight care at your home",
     pricing: "Contact for pricing",
+    rates: [
+      "Contact for personalized rates"
+    ],
     details: [
       "Extended evening and morning care",
       "Feeding and exercise routines",
@@ -36,6 +44,9 @@ const services = [
     title: "Exotic Pet Care",
     description: "Specialized care for reptiles, fish, and small mammals",
     pricing: "Contact for pricing",
+    rates: [
+      "Contact for personalized rates"
+    ],
     details: [
       "Species-specific handling and care",
       "Proper environment maintenance",
@@ -52,6 +63,7 @@ interface ServiceCardProps {
     title: string;
     description: string;
     pricing: string;
+    rates: string[];
     details: string[];
   };
   isExpanded: boolean;
@@ -69,10 +81,6 @@ const ServiceCard = ({ service, isExpanded, toggleExpand }: ServiceCardProps) =>
         </div>
         <h3 className="mb-2 text-lg sm:text-xl font-semibold text-gray-800">{service.title}</h3>
         <p className="text-sm sm:text-base text-gray-600 mb-3">{service.description}</p>
-        
-        <div className="w-full max-w-[200px] py-2 px-4 my-3 bg-[#F1F0FB] rounded-md">
-          <p className="text-sm sm:text-base font-medium text-[#6BA5E7]">{service.pricing}</p>
-        </div>
         
         <Button 
           variant="ghost" 
@@ -94,11 +102,21 @@ const ServiceCard = ({ service, isExpanded, toggleExpand }: ServiceCardProps) =>
         <div className={`mt-4 overflow-hidden transition-all duration-300 w-full ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="pt-4 border-t border-gray-200">
             <h4 className="font-medium text-gray-800 mb-2">What we offer:</h4>
-            <ul className="text-sm text-left space-y-2">
+            <ul className="text-sm text-left space-y-2 mb-4">
               {service.details.map((detail, i) => (
                 <li key={i} className="flex items-start">
                   <span className="text-[#6BA5E7] mr-2">•</span>
                   <span>{detail}</span>
+                </li>
+              ))}
+            </ul>
+            
+            <h4 className="font-medium text-gray-800 mb-2">Rates:</h4>
+            <ul className="text-sm text-left space-y-2">
+              {service.rates.map((rate, i) => (
+                <li key={i} className="flex items-start">
+                  <span className="text-[#FFA885] mr-2">•</span>
+                  <span className="font-medium">{rate}</span>
                 </li>
               ))}
             </ul>
