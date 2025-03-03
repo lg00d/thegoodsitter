@@ -78,26 +78,6 @@ const About = () => {
                 </CardContent>
               </Card>
             </div>
-            
-            <div className="text-center">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-6">Ready to Experience The Good Sitter Difference?</h2>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link to="/">
-                  <Button className="bg-[#FF9EB1] hover:bg-[#FF7A94] text-white px-6 py-2">
-                    View Our Services
-                  </Button>
-                </Link>
-                <Button 
-                  variant="outline" 
-                  className="border-[#FF9EB1] text-[#FF9EB1] hover:bg-[#FF9EB1]/10"
-                  onClick={() => {
-                    window.location.href = "/#contact";
-                  }}
-                >
-                  Contact Us
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
       </main>
