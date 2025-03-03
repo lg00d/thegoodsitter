@@ -1,5 +1,6 @@
+
 import { useState } from "react";
-import { Heart, Home, Leaf, ChevronDown, ChevronUp } from "lucide-react";
+import { Heart, Home, Leaf, ChevronDown, ChevronUp, Dog } from "lucide-react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -20,6 +21,23 @@ const services = [
       "Brief walk or playtime",
       "Medication administration - if needed",
       "Status updates with photos"
+    ]
+  },
+  {
+    icon: <Dog className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
+    title: "Dog Walking",
+    description: "Professional dog walking services to keep your furry friend active and happy",
+    pricing: "$25 for 30 min walk",
+    rates: [
+      "30 minutes - $25",
+      "Additional dog - $5"
+    ],
+    details: [
+      "Personalized walking routes",
+      "Exercise and socialization",
+      "Leash training reinforcement",
+      "Fresh water provided",
+      "Updates with photos after each walk"
     ]
   },
   {
@@ -144,7 +162,7 @@ const ServicesSection = () => {
             Comprehensive pet care services tailored to your needs
           </p>
         </div>
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <ServiceCard 
               key={index} 
