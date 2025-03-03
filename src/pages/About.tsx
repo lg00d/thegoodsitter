@@ -17,7 +17,7 @@ const About = () => {
             <div className="bg-white rounded-lg shadow-md p-6 mb-8">
               <div className="flex items-center mb-6">
                 <PawPrint size={40} className="text-[#FFA885] mr-4" />
-                <h2 className="text-2xl font-semibold text-gray-800">Our Story</h2>
+                <h2 className="text-2xl font-semibold text-gray-800">My Story</h2>
               </div>
               <p className="text-gray-700 mb-4">
                 Hi, I'm Liz Goodman, the face behind The Good Sitter! Animals have always been at the center of my life. I was raised riding horses, which meant growing up surrounded by all kinds of animals…from barn cats to working dogs and, of course, horses. That hands-on experience taught me not only how to care for animals but also how to understand them, their needs, their personalities, and the little details that make each one unique.
