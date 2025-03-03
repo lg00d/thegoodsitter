@@ -1,9 +1,11 @@
+
 import React from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { PawPrint } from "lucide-react";
+import { PawPrint, Heart, Star } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   return (
@@ -39,62 +41,42 @@ const About = () => {
               </p>
             </div>
             
-            <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">My Values</h2>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="bg-[#FFA885] rounded-full p-1 mr-3 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                  <span className="text-gray-700"><strong>Experience & Knowledge:</strong> With years of managing horses and training dogs, I bring practical experience to every pet care situation.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-[#FFA885] rounded-full p-1 mr-3 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                  <span className="text-gray-700"><strong>Attention to Detail:</strong> Just as in managing a show barn, I understand that thoughtful, consistent care makes all the difference for your pets.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-[#FFA885] rounded-full p-1 mr-3 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                  <span className="text-gray-700"><strong>Reliability:</strong> I understand the responsibility that comes with caring for animals and am committed to being someone you can depend on.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-[#FFA885] rounded-full p-1 mr-3 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                  <span className="text-gray-700"><strong>Understanding:</strong> I recognize that each animal has unique needs, personalities, and quirks that require personalized care and attention.</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Meet Our Team</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h3 className="text-xl font-medium text-gray-800 mb-2">Sarah Johnson</h3>
-                  <p className="text-gray-600 italic mb-3">Founder & Lead Pet Sitter</p>
-                  <p className="text-gray-700">
-                    With over 10 years of experience in animal care and a degree in veterinary technology, Sarah ensures that every pet receives exceptional care.
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <Card className="bg-white shadow-md border-none">
+                <CardContent className="pt-6">
+                  <div className="flex justify-center mb-4">
+                    <Heart size={40} className="text-[#FFA885]" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 text-center mb-2">Passionate Care</h3>
+                  <p className="text-gray-700 text-center">
+                    Every pet receives loving attention tailored to their unique personality and needs.
                   </p>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <h3 className="text-xl font-medium text-gray-800 mb-2">Michael Torres</h3>
-                  <p className="text-gray-600 italic mb-3">Dog Walking Specialist</p>
-                  <p className="text-gray-700">
-                    Michael's energy and enthusiasm make him a favorite among our canine clients. He's trained in pet first aid and handling techniques.
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white shadow-md border-none">
+                <CardContent className="pt-6">
+                  <div className="flex justify-center mb-4">
+                    <Star size={40} className="text-[#FFA885]" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 text-center mb-2">Professional Experience</h3>
+                  <p className="text-gray-700 text-center">
+                    With years of professional animal management experience, your pets are in expert hands.
                   </p>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white shadow-md border-none">
+                <CardContent className="pt-6">
+                  <div className="flex justify-center mb-4">
+                    <PawPrint size={40} className="text-[#FFA885]" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 text-center mb-2">Peace of Mind</h3>
+                  <p className="text-gray-700 text-center">
+                    Rest easy knowing your beloved pets are in caring, dependable hands while you're away.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
             
             <div className="text-center">
