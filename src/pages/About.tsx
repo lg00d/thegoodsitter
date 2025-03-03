@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <div className="about-page" style={{ background: "linear-gradient(to bottom, #F97316 0%, white 100%)", minHeight: "100vh" }}>
+    <div className="about-page" style={{ background: "linear-gradient(to bottom, #FFDEE2 0%, white 100%)", minHeight: "100vh" }}>
       <Navigation />
       <main className="min-h-screen flex flex-col">
         <div className="container mx-auto px-4 py-12">
@@ -18,7 +18,7 @@ const About = () => {
             
             <div className="bg-white rounded-lg shadow-md p-6 mb-8">
               <div className="flex items-center mb-6">
-                <PawPrint size={40} className="text-[#D946EF] mr-4" />
+                <PawPrint size={40} className="text-[#FF9EB1] mr-4" />
                 <h2 className="text-2xl font-semibold text-gray-800">My Story</h2>
               </div>
               <p className="text-gray-700 mb-4">
@@ -45,7 +45,7 @@ const About = () => {
               <Card className="bg-white shadow-md border-none">
                 <CardContent className="pt-6">
                   <div className="flex justify-center mb-4">
-                    <Heart size={40} className="text-[#D946EF]" />
+                    <Heart size={40} className="text-[#FF9EB1]" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 text-center mb-2">Passionate Care</h3>
                   <p className="text-gray-700 text-center">
@@ -57,7 +57,7 @@ const About = () => {
               <Card className="bg-white shadow-md border-none">
                 <CardContent className="pt-6">
                   <div className="flex justify-center mb-4">
-                    <Star size={40} className="text-[#D946EF]" />
+                    <Star size={40} className="text-[#FF9EB1]" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 text-center mb-2">Professional Experience</h3>
                   <p className="text-gray-700 text-center">
@@ -69,7 +69,7 @@ const About = () => {
               <Card className="bg-white shadow-md border-none">
                 <CardContent className="pt-6">
                   <div className="flex justify-center mb-4">
-                    <PawPrint size={40} className="text-[#D946EF]" />
+                    <PawPrint size={40} className="text-[#FF9EB1]" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 text-center mb-2">Peace of Mind</h3>
                   <p className="text-gray-700 text-center">
@@ -83,13 +83,13 @@ const About = () => {
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">Ready to Experience The Good Sitter Difference?</h2>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link to="/">
-                  <Button className="bg-[#D946EF] hover:bg-[#C026D3] text-white px-6 py-2">
+                  <Button className="bg-[#FF9EB1] hover:bg-[#FF7A94] text-white px-6 py-2">
                     View Our Services
                   </Button>
                 </Link>
                 <Button 
                   variant="outline" 
-                  className="border-[#D946EF] text-[#D946EF] hover:bg-[#D946EF]/10"
+                  className="border-[#FF9EB1] text-[#FF9EB1] hover:bg-[#FF9EB1]/10"
                   onClick={() => {
                     window.location.href = "/#contact";
                   }}
