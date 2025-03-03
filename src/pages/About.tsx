@@ -61,7 +61,7 @@ const About = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 text-center mb-2">Professional Experience</h3>
                   <p className="text-gray-700 text-center">
-                    With years of professional animal management experience, your pets are in expert hands.
+                    With years of professional animal care experience, your pets are in expert hands.
                   </p>
                 </CardContent>
               </Card>
