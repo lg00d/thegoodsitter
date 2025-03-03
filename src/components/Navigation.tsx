@@ -1,33 +1,58 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { PawPrint, Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Handle scrolling to anchors when URL changes
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (location.hash) {
+      // Get the element with that id
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        // Wait a bit for the page to fully load before scrolling
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
+  // Handle anchor link clicks
   const handleAnchorClick = (anchor: string) => {
     setIsMenuOpen(false);
-    if (isHomePage) return; // If already on home page, let the browser handle the anchor
+    
+    if (isHomePage) {
+      // If already on home page, just scroll to the section
+      const element = document.getElementById(anchor);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If on another page, navigate to home page with hash
+      navigate(`/#${anchor}`);
+    }
   };
 
   // Create links that work from any page
   const createLink = (anchor: string, label: string) => {
-    const url = isHomePage ? `#${anchor}` : `/#${anchor}`;
     return (
-      <a 
-        href={url} 
-        className="text-gray-700 hover:text-[#FFA885] transition-colors"
-        onClick={() => setIsMenuOpen(false)}
+      <button 
+        onClick={() => handleAnchorClick(anchor)}
+        className="text-gray-700 hover:text-[#FFA885] transition-colors text-left"
       >
         {label}
-      </a>
+      </button>
     );
   };
 
@@ -67,27 +92,24 @@ const Navigation = () => {
       {isMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white shadow-md py-4 px-4 md:hidden animate-fade-in z-50">
           <div className="flex flex-col space-y-4">
-            <a 
-              href={isHomePage ? "#services" : "/#services"} 
-              className="text-gray-700 hover:text-[#FFA885] transition-colors py-2 px-4 rounded-md hover:bg-gray-100"
-              onClick={() => setIsMenuOpen(false)}
+            <button 
+              onClick={() => handleAnchorClick("services")}
+              className="text-gray-700 hover:text-[#FFA885] transition-colors py-2 px-4 rounded-md hover:bg-gray-100 text-left"
             >
               Services
-            </a>
-            <a 
-              href={isHomePage ? "#testimonials" : "/#testimonials"} 
-              className="text-gray-700 hover:text-[#FFA885] transition-colors py-2 px-4 rounded-md hover:bg-gray-100"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button 
+              onClick={() => handleAnchorClick("testimonials")}
+              className="text-gray-700 hover:text-[#FFA885] transition-colors py-2 px-4 rounded-md hover:bg-gray-100 text-left"
             >
               Testimonials
-            </a>
-            <a 
-              href={isHomePage ? "#contact" : "/#contact"} 
-              className="text-gray-700 hover:text-[#FFA885] transition-colors py-2 px-4 rounded-md hover:bg-gray-100"
-              onClick={() => setIsMenuOpen(false)}
+            </button>
+            <button 
+              onClick={() => handleAnchorClick("contact")}
+              className="text-gray-700 hover:text-[#FFA885] transition-colors py-2 px-4 rounded-md hover:bg-gray-100 text-left"
             >
               Contact
-            </a>
+            </button>
             <Link 
               to="/about" 
               className="text-gray-700 hover:text-[#FFA885] transition-colors py-2 px-4 rounded-md hover:bg-gray-100"
