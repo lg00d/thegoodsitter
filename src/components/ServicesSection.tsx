@@ -68,8 +68,11 @@ const ServiceCard = ({ service, isExpanded, toggleExpand }: ServiceCardProps) =>
           {service.icon}
         </div>
         <h3 className="mb-2 text-lg sm:text-xl font-semibold text-gray-800">{service.title}</h3>
-        <p className="text-sm sm:text-base text-gray-600 mb-2">{service.description}</p>
-        <p className="text-sm sm:text-base font-medium text-[#6BA5E7] mb-4">{service.pricing}</p>
+        <p className="text-sm sm:text-base text-gray-600 mb-3">{service.description}</p>
+        
+        <div className="w-full max-w-[200px] py-2 px-4 my-3 bg-[#F1F0FB] rounded-md">
+          <p className="text-sm sm:text-base font-medium text-[#6BA5E7]">{service.pricing}</p>
+        </div>
         
         <Button 
           variant="ghost" 
