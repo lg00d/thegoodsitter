@@ -9,6 +9,7 @@ const services = [
     icon: <Heart className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "Pet Stop",
     description: "30 minute check-ins and care at your home throughout the day",
+    pricing: "$24 for 30 mins, +$12 for full hour/extended time",
     details: [
       "Feeding & Water",
       "Potty Stop",
@@ -21,6 +22,7 @@ const services = [
     icon: <Home className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "House Sitting",
     description: "Overnight care at your home",
+    pricing: "Contact for pricing",
     details: [
       "Extended evening and morning care",
       "Feeding and exercise routines",
@@ -33,6 +35,7 @@ const services = [
     icon: <Leaf className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "Exotic Pet Care",
     description: "Specialized care for reptiles, fish, and small mammals",
+    pricing: "Contact for pricing",
     details: [
       "Species-specific handling and care",
       "Proper environment maintenance",
@@ -48,6 +51,7 @@ interface ServiceCardProps {
     icon: JSX.Element;
     title: string;
     description: string;
+    pricing: string;
     details: string[];
   };
   isExpanded: boolean;
@@ -64,7 +68,8 @@ const ServiceCard = ({ service, isExpanded, toggleExpand }: ServiceCardProps) =>
           {service.icon}
         </div>
         <h3 className="mb-2 text-lg sm:text-xl font-semibold text-gray-800">{service.title}</h3>
-        <p className="text-sm sm:text-base text-gray-600 mb-4">{service.description}</p>
+        <p className="text-sm sm:text-base text-gray-600 mb-2">{service.description}</p>
+        <p className="text-sm sm:text-base font-medium text-[#6BA5E7] mb-4">{service.pricing}</p>
         
         <Button 
           variant="ghost" 
