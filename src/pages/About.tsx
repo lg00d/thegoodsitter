@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -21,13 +20,22 @@ const About = () => {
                 <h2 className="text-2xl font-semibold text-gray-800">Our Story</h2>
               </div>
               <p className="text-gray-700 mb-4">
-                The Good Sitter was founded with a simple mission: to provide loving, attentive care for pets when their owners are away. What started as a small, neighborhood service has grown into a trusted pet care solution for families throughout the area.
+                Hi, I'm Liz Goodman, the face behind The Good Sitter! Animals have always been at the center of my life. I was raised riding horses, which meant growing up surrounded by all kinds of animals…from barn cats to working dogs and, of course, horses. That hands-on experience taught me not only how to care for animals but also how to understand them, their needs, their personalities, and the little details that make each one unique.
               </p>
               <p className="text-gray-700 mb-4">
-                With years of experience caring for dogs, cats, and exotic pets, we understand that each animal has unique needs and personalities. Our approach is tailored to ensure your pets receive the individual attention they deserve.
+                My journey with animals became more structured when I got my first Australian Cattle Dog. Together, we went through all levels of obedience training and later took on the challenge of agility courses. That experience deepened my appreciation for training, patience, and the special bond between animals and their humans.
+              </p>
+              <p className="text-gray-700 mb-4">
+                For three years, I managed an A-rated show barn, overseeing the care of 12+ horses. My responsibilities included preparing horses for daily training, feeding, medication administration, show preparation, grooming, and maintaining a safe and organized environment for both the horses and people. This level of responsibility required reliability, attention to detail, and an understanding that animals don't just need care—they need thoughtful, consistent care.
+              </p>
+              <p className="text-gray-700 mb-4">
+                Now, as The Good Sitter, I bring that same level of dedication, experience, and love for animals to pet sitting and dog walking. I know how important it is to find someone you can trust—someone who will treat your pets like their own. Whether it's a walk, in-home pet sitting, or specialized care, my goal is to ensure your pets feel safe, comfortable, and happy while you're away.
               </p>
               <p className="text-gray-700">
-                We believe that pets are family, and we treat them with the same care and respect we would want for our own furry companions. When you choose The Good Sitter, you're choosing peace of mind.
+                I'd love to meet you and your pets, let's chat and see how I can help!
+              </p>
+              <p className="text-gray-700 font-semibold mt-4">
+                Good Sitter. Better Pets. Happier You.
               </p>
             </div>
             
