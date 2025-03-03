@@ -18,7 +18,7 @@ const services = [
     details: [
       "Feeding & Water",
       "Potty Stop",
-      "Brief walk or playtime",
+      "Playtime",
       "Medication administration - if needed",
       "Status updates with photos"
     ]
