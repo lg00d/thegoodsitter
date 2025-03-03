@@ -40,7 +40,7 @@ const About = () => {
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Values</h2>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">My Values</h2>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="bg-[#FFA885] rounded-full p-1 mr-3 mt-1">
@@ -48,7 +48,7 @@ const About = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </span>
-                  <span className="text-gray-700"><strong>Reliability:</strong> We show up when we say we will, every time.</span>
+                  <span className="text-gray-700"><strong>Experience & Knowledge:</strong> With years of managing horses and training dogs, I bring practical experience to every pet care situation.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="bg-[#FFA885] rounded-full p-1 mr-3 mt-1">
@@ -56,7 +56,7 @@ const About = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </span>
-                  <span className="text-gray-700"><strong>Compassion:</strong> Every pet receives loving attention and care.</span>
+                  <span className="text-gray-700"><strong>Attention to Detail:</strong> Just as in managing a show barn, I understand that thoughtful, consistent care makes all the difference for your pets.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="bg-[#FFA885] rounded-full p-1 mr-3 mt-1">
@@ -64,7 +64,7 @@ const About = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </span>
-                  <span className="text-gray-700"><strong>Communication:</strong> We keep you updated about your pet's well-being.</span>
+                  <span className="text-gray-700"><strong>Reliability:</strong> I understand the responsibility that comes with caring for animals and am committed to being someone you can depend on.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="bg-[#FFA885] rounded-full p-1 mr-3 mt-1">
@@ -72,7 +72,7 @@ const About = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </span>
-                  <span className="text-gray-700"><strong>Expertise:</strong> We continuously educate ourselves on best pet care practices.</span>
+                  <span className="text-gray-700"><strong>Understanding:</strong> I recognize that each animal has unique needs, personalities, and quirks that require personalized care and attention.</span>
                 </li>
               </ul>
             </div>
