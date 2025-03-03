@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center">
             <PawPrint className="h-6 w-6 text-[#FFA885] mr-2" />
-            <span className="text-gray-700 font-medium">Snuggly Sitter</span>
+            <span className="text-gray-700 font-medium">The Good Sitter</span>
           </div>
           
           <div className="flex flex-col md:flex-row items-center gap-4">
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
           
           <div className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} Snuggly Sitter. All rights reserved.
+            &copy; {new Date().getFullYear()} The Good Sitter. All rights reserved.
           </div>
         </div>
       </div>
