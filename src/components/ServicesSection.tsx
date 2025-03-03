@@ -94,9 +94,9 @@ interface ServiceCardProps {
 const ServiceCard = ({ service, isExpanded, toggleExpand }: ServiceCardProps) => {
   return (
     <Card 
-      className="p-5 sm:p-6 transition-all duration-300 hover:shadow-lg bg-white/90 backdrop-blur-sm relative overflow-hidden"
+      className="p-5 sm:p-6 transition-all duration-300 hover:shadow-lg bg-white/90 backdrop-blur-sm relative flex flex-col h-full"
     >
-      <div className="flex flex-col items-center text-center">
+      <div className="flex flex-col items-center text-center flex-grow">
         <div className="p-3 mb-4 rounded-full bg-[#F1F0FB]">
           {service.icon}
         </div>
@@ -120,8 +120,8 @@ const ServiceCard = ({ service, isExpanded, toggleExpand }: ServiceCardProps) =>
           )}
         </Button>
         
-        <div className={`mt-4 overflow-hidden transition-all duration-300 w-full ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="pt-4 border-t border-gray-200">
+        <div className={`mt-4 w-full overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="pt-4 border-t border-gray-200 overflow-y-auto max-h-[180px] pr-1 scrollbar-thin">
             <h4 className="font-medium text-gray-800 mb-2">What we offer:</h4>
             <ul className="text-sm text-left space-y-2 mb-4">
               {service.details.map((detail, i) => (
@@ -149,10 +149,10 @@ const ServiceCard = ({ service, isExpanded, toggleExpand }: ServiceCardProps) =>
 };
 
 const ServicesSection = () => {
-  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
   
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
+  const toggleExpand = (index: number) => {
+    setExpandedCard(expandedCard === index ? null : index);
   };
   
   return (
@@ -171,8 +171,8 @@ const ServicesSection = () => {
             <ServiceCard 
               key={index} 
               service={service} 
-              isExpanded={isExpanded}
-              toggleExpand={toggleExpand}
+              isExpanded={expandedCard === index}
+              toggleExpand={() => toggleExpand(index)}
             />
           ))}
         </div>

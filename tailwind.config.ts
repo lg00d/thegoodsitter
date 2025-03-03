@@ -74,5 +74,26 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.scrollbar-thin': {
+          scrollbarWidth: 'thin',
+          '&::-webkit-scrollbar': {
+            width: '6px',
+          },
+          '&::-webkit-scrollbar-track': {
+            backgroundColor: '#F1F0FB',
+            borderRadius: '100vh',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: '#6BA5E7',
+            borderRadius: '100vh',
+          },
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 } satisfies Config;
