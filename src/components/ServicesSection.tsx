@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Heart, Home, Leaf, ChevronDown, ChevronUp } from "lucide-react";
 import { Card } from "./ui/card";
@@ -12,7 +11,7 @@ const services = [
     pricing: "$24 for 30 mins, +$12 for full hour/extended time",
     rates: [
       "30 minutes - $24",
-      "Full hour - $36",
+      "Full hour - $40",
       "Additional pet - $5"
     ],
     details: [
