@@ -79,7 +79,7 @@ const About = () => {
             </div>
             
             <div className="text-center mt-8 mb-6 bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Ready to meet the Good Sitter?</h2>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4">Ready to meet The Good Sitter?</h2>
               <Button 
                 className="bg-[#FF9EB1] hover:bg-[#FF7A94] text-white px-6 py-2"
                 onClick={() => {
