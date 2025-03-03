@@ -29,6 +29,9 @@ const Navigation = () => {
           <a href="#contact" className="text-gray-700 hover:text-[#FFA885] transition-colors">
             Contact
           </a>
+          <Link to="/about" className="text-gray-700 hover:text-[#FFA885] transition-colors">
+            About
+          </Link>
         </div>
         
         {/* Mobile Menu Button */}
@@ -70,6 +73,13 @@ const Navigation = () => {
             >
               Contact
             </a>
+            <Link 
+              to="/about" 
+              className="text-gray-700 hover:text-[#FFA885] transition-colors py-2 px-4 rounded-md hover:bg-gray-100"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
           </div>
         </div>
       )}
