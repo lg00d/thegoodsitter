@@ -32,7 +32,7 @@ const services = [
   {
     icon: <Leaf className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "Exotic Pet Care",
-    description: "Specialized care for reptiles, birds, and small mammals",
+    description: "Specialized care for reptiles, fish, and small mammals",
     details: [
       "Species-specific handling and care",
       "Proper environment maintenance",
