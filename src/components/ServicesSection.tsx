@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Heart, Home, Leaf, ChevronDown, ChevronUp, Dog } from "lucide-react";
 import { Card } from "./ui/card";
@@ -33,7 +32,6 @@ const services = [
       "Additional dog - $5"
     ],
     details: [
-      "Personalized walking routes",
       "Exercise and socialization",
       "Leash training reinforcement",
       "Fresh water provided",
