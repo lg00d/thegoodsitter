@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Heart, Home, Leaf, ChevronDown, ChevronUp, Dog } from "lucide-react";
 import { Card } from "./ui/card";
@@ -42,9 +43,14 @@ const services = [
     icon: <Home className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "House Sitting",
     description: "Overnight care at your home",
-    pricing: "Contact for pricing",
+    pricing: "Starting at $100 per night",
     rates: [
-      "Contact for personalized rates"
+      "Standard rate - $100/night",
+      "Holiday rate - $125/night",
+      "Puppy rate - $115/night",
+      "Additional dog - $20",
+      "Cat care - $85/night",
+      "Additional cat - $5"
     ],
     details: [
       "Extended evening and morning care",
