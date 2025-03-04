@@ -31,7 +31,7 @@ const services = [
     rates: [
       "30 minutes - $25",
       "Full hour - $45",
-      "+$5 - Additional dog"
+      "Additional Dog: + $5"
     ],
     details: [
       "Exercise and socialization",
