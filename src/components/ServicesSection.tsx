@@ -153,7 +153,12 @@ const ServicesSection = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   
   const toggleExpand = (index: number) => {
-    setExpandedCard(expandedCard === index ? null : index);
+    // If clicking the same card, collapse; otherwise expand all cards
+    if (expandedCard === index) {
+      setExpandedCard(null);
+    } else {
+      setExpandedCard(index);
+    }
   };
   
   return (
@@ -172,7 +177,7 @@ const ServicesSection = () => {
             <ServiceCard 
               key={index} 
               service={service} 
-              isExpanded={expandedCard === index}
+              isExpanded={expandedCard !== null}
               toggleExpand={() => toggleExpand(index)}
             />
           ))}
