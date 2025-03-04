@@ -49,9 +49,9 @@ const services = [
       "Standard rate - $100/night",
       "Holiday rate - $125/night",
       "Puppy rate - $115/night",
-      "+$20 - Additional dog",
+      "Additional Dog: + $20",
       "Cat care - $85/night",
-      "+$5 - Additional cat"
+      "Additional Cat: + $5"
     ],
     details: [
       "Extended evening and morning care",
