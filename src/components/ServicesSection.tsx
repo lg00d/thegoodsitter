@@ -30,6 +30,7 @@ const services = [
     pricing: "$25 for 30 min walk",
     rates: [
       "30 minutes - $25",
+      "Full hour - $45",
       "+$5 - Additional dog"
     ],
     details: [
@@ -120,8 +121,8 @@ const ServiceCard = ({ service, isExpanded, toggleExpand }: ServiceCardProps) =>
           )}
         </Button>
         
-        <div className={`mt-4 w-full overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="pt-4 border-t border-gray-200 overflow-y-auto max-h-[180px] pr-1 scrollbar-thin">
+        <div className={`mt-4 w-full overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="pt-4 border-t border-gray-200 overflow-y-auto max-h-[300px] pr-1 scrollbar-thin">
             <h4 className="font-medium text-gray-800 mb-2">What we offer:</h4>
             <ul className="text-sm text-left space-y-2 mb-4">
               {service.details.map((detail, i) => (
