@@ -9,6 +9,7 @@ import { Textarea } from "./ui/textarea";
 import { Card } from "./ui/card";
 import { PawPrint } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
 
 // Form validation schema
 const formSchema = z.object({
@@ -19,6 +20,11 @@ const formSchema = z.object({
 });
 
 type FormValues = z.infer<typeof formSchema>;
+
+// EmailJS configuration
+const EMAILJS_SERVICE_ID = "default_service"; // Replace with your actual Service ID
+const EMAILJS_TEMPLATE_ID = "template_default"; // Replace with your actual Template ID
+const EMAILJS_USER_ID = "user_xxxxxxxxxxxxx"; // Replace with your actual User ID
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -43,8 +49,22 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      // Simulate API call with timeout
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Prepare the template parameters
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        from_phone: data.phone,
+        message: data.message,
+        to_email: "egoodman1180@icloud.com"
+      };
+      
+      // Send the email
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
       
       console.log("Form submitted:", data);
       
