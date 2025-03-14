@@ -55,7 +55,7 @@ const ContactSection = () => {
         from_email: data.email,
         from_phone: data.phone,
         message: data.message,
-        to_email: "egoodman1180@icloud.com"
+        to_email: "egoodman1180@gmail.com"
       };
       
       // Send the email
