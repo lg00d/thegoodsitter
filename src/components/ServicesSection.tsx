@@ -9,10 +9,10 @@ const services = [
     icon: <Heart className="w-7 h-7 md:w-8 md:h-8 text-[#6BA5E7]" />,
     title: "Pet Stop",
     description: "30 minute check-ins and care at your home throughout the day",
-    pricing: "$24 for 30 mins, +$12 for full hour/extended time",
+    pricing: "$20 for 30 mins, +$15 for full hour/extended time",
     rates: [
-      "30 minutes - $24",
-      "Full hour - $40",
+      "30 minutes - $20",
+      "Full hour - $35",
       "+$5 - Additional pet"
     ],
     details: [
