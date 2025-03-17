@@ -3,8 +3,8 @@ import { PawPrint, Dog, Cat, Heart, Calendar } from "lucide-react";
 import { Button } from "./ui/button";
 
 const HeroSection = () => {
-  // Booking URL - replace with your actual booking URL
-  const bookingUrl = "https://calendly.com/thegoodsitter/booking";
+  // Booking URL - Square appointments link
+  const bookingUrl = "https://app.squareup.com/appointments/book/r5eq1i2t9ywb3w/LT4P0172NB5CV/start";
 
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
@@ -61,10 +61,12 @@ const HeroSection = () => {
           <Heart className="w-8 h-8 text-[#FFA885]" />
           <Cat className="w-8 h-8 text-[#FFA885]" />
         </div>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        
+        {/* Updated button layout - stacked vertically and centered */}
+        <div className="flex flex-col items-center justify-center gap-4 max-w-xs mx-auto">
           <Button 
             size="lg" 
-            className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+            className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Book a Consultation
@@ -72,7 +74,7 @@ const HeroSection = () => {
           <Button 
             size="lg" 
             variant="secondary"
-            className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 gap-2 w-full sm:w-auto"
+            className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 gap-2 w-full"
             onClick={() => window.open(bookingUrl, '_blank')}
           >
             <Calendar className="w-5 h-5" />
