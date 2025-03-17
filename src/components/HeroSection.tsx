@@ -7,7 +7,7 @@ const HeroSection = () => {
   const bookingUrl = "https://calendly.com/thegoodsitter/booking";
 
   return (
-    <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-12">
+    <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 pointer-events-none hidden md:block">
         {/* Left side pets - moved further out */}
         <div className="absolute top-12 left-8">
@@ -48,11 +48,11 @@ const HeroSection = () => {
           <Heart className="w-40 h-40 text-[#FFA885]" />
         </div>
       </div>
-      <div className="container px-4 mx-auto max-w-4xl text-center">
-        <h1 className="mx-auto mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-white">
+      <div className="container px-4 mx-auto text-center">
+        <h1 className="max-w-3xl mx-auto mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-white">
           Your pets deserve the very best care
         </h1>
-        <p className="mx-auto mb-8 text-lg text-gray-700 max-w-2xl">
+        <p className="max-w-xl mx-auto mb-8 text-lg text-gray-700">
           Professional, loving care for your furry family members. 
           We treat every pet like our own, providing 24/7 attention and care.
         </p>
@@ -61,7 +61,7 @@ const HeroSection = () => {
           <Heart className="w-8 h-8 text-[#FFA885]" />
           <Cat className="w-8 h-8 text-[#FFA885]" />
         </div>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button 
             size="lg" 
             className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"

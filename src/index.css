@@ -23,18 +23,9 @@
     background: linear-gradient(to bottom, #FFA885 0%, white 100%);
     background-attachment: fixed;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
   }
 }
 
 html {
   scroll-behavior: smooth;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
 }
