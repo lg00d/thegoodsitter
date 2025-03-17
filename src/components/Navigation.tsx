@@ -1,7 +1,8 @@
 
 import { useState, useEffect } from "react";
-import { PawPrint, Menu, X } from "lucide-react";
+import { PawPrint, Menu, X, Calendar } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Button } from "./ui/button";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,6 +13,9 @@ const Navigation = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Booking URL - replace with your actual booking URL
+  const bookingUrl = "https://calendly.com/thegoodsitter/booking";
 
   // Handle scrolling to anchors when URL changes
   useEffect(() => {
@@ -72,6 +76,15 @@ const Navigation = () => {
           <Link to="/about" className="text-gray-700 hover:text-[#FFA885] transition-colors">
             About
           </Link>
+          <Button 
+            className="rounded-full gap-2 hover:scale-105"
+            onClick={() => window.open(bookingUrl, '_blank')}
+            variant="default"
+            size="sm"
+          >
+            <Calendar className="w-4 h-4" />
+            Book Now
+          </Button>
         </div>
         
         {/* Mobile Menu Button */}
@@ -117,6 +130,17 @@ const Navigation = () => {
             >
               About
             </Link>
+            <Button 
+              className="rounded-full gap-2 w-full"
+              onClick={() => {
+                window.open(bookingUrl, '_blank');
+                setIsMenuOpen(false);
+              }}
+              variant="default"
+            >
+              <Calendar className="w-4 h-4" />
+              Book Now
+            </Button>
           </div>
         </div>
       )}

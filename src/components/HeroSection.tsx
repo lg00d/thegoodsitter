@@ -1,8 +1,11 @@
 
-import { PawPrint, Dog, Cat, Heart } from "lucide-react";
+import { PawPrint, Dog, Cat, Heart, Calendar } from "lucide-react";
 import { Button } from "./ui/button";
 
 const HeroSection = () => {
+  // Booking URL - replace with your actual booking URL
+  const bookingUrl = "https://calendly.com/thegoodsitter/booking";
+
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 pointer-events-none hidden md:block">
@@ -58,13 +61,24 @@ const HeroSection = () => {
           <Heart className="w-8 h-8 text-[#FFA885]" />
           <Cat className="w-8 h-8 text-[#FFA885]" />
         </div>
-        <Button 
-          size="lg" 
-          className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-        >
-          Book a Consultation
-        </Button>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Button 
+            size="lg" 
+            className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Book a Consultation
+          </Button>
+          <Button 
+            size="lg" 
+            variant="secondary"
+            className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 gap-2 w-full sm:w-auto"
+            onClick={() => window.open(bookingUrl, '_blank')}
+          >
+            <Calendar className="w-5 h-5" />
+            Book Now
+          </Button>
+        </div>
       </div>
     </div>
   );
