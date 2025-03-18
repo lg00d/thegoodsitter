@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Heart, Home, Leaf, ChevronDown, ChevronUp, Dog } from "lucide-react";
 import { Card } from "./ui/card";
@@ -13,7 +12,7 @@ const services = [
     rates: [
       "30 minutes - $20",
       "Full hour - $35",
-      "Additional Pet: $5"
+      "Additional Pet: +$5"
     ],
     details: [
       "Feeding & Water",
@@ -153,7 +152,6 @@ const ServicesSection = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   
   const toggleExpand = (index: number) => {
-    // If clicking the same card, collapse; otherwise expand all cards
     if (expandedCard === index) {
       setExpandedCard(null);
     } else {
