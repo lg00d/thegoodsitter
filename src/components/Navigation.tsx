@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { PawPrint, Menu, X, Calendar } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -14,8 +13,8 @@ const Navigation = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Booking URL - replace with your actual booking URL
-  const bookingUrl = "https://calendly.com/thegoodsitter/booking";
+  // Booking URL - updated to Time To Pet portal
+  const bookingUrl = "https://www.timetopet.com/portal/thegoodsitter/create-account";
 
   // Handle scrolling to anchors when URL changes
   useEffect(() => {

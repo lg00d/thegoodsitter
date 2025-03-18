@@ -1,10 +1,9 @@
-
 import { PawPrint, Dog, Cat, Heart, Calendar } from "lucide-react";
 import { Button } from "./ui/button";
 
 const HeroSection = () => {
-  // Booking URL - Square appointments link
-  const bookingUrl = "https://app.squareup.com/appointments/book/r5eq1i2t9ywb3w/LT4P0172NB5CV/start";
+  // Booking URL - updated to Time To Pet portal
+  const bookingUrl = "https://www.timetopet.com/portal/thegoodsitter/create-account";
 
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
@@ -62,7 +61,6 @@ const HeroSection = () => {
           <Cat className="w-8 h-8 text-[#FFA885]" />
         </div>
         
-        {/* Updated button layout - stacked vertically and centered */}
         <div className="flex flex-col items-center justify-center gap-4 max-w-xs mx-auto">
           <Button 
             size="lg" 
