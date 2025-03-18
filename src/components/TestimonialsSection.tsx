@@ -4,14 +4,14 @@ import { PawPrint } from "lucide-react";
 
 const testimonials = [
   {
-    text: "The best pet sitter we've ever had! Our cats were so happy and well-cared for.",
-    author: "Sarah M.",
-    role: "Cat Parent",
+    text: "Wonderful and very reliable! We have booked Elizabeth a number of times and she is so great with our two big dogs. We love her!",
+    author: "S.H.",
+    role: "Dog Parent",
   },
   {
-    text: "Incredibly professional and caring. I felt completely at ease leaving my dog in their care.",
-    author: "Michael R.",
-    role: "Dog Parent",
+    text: "Elizabeth was absolutely amazing! She handled my babies so well and in my challenging environment! I had nothing to worry about while I was away!!",
+    author: "M.M.",
+    role: "Cat Parent",
   },
   {
     text: "Responsive, reliable, and genuinely loves animals. Highly recommended!",
