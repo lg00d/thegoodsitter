@@ -14,9 +14,9 @@ const testimonials = [
     role: "Cat Parent",
   },
   {
-    text: "Responsive, reliable, and genuinely loves animals. Highly recommended!",
-    author: "Emily L.",
-    role: "Pet Parent",
+    text: "Always happy to come home, and see a cheerful pup having had a lovely walk with Lizzy!",
+    author: "E.F.",
+    role: "Dog Parent",
   },
 ];
 
