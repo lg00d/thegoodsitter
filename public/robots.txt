@@ -1,0 +1,10 @@
+
+# Allow all web crawlers to access all content
+User-agent: *
+Allow: /
+
+# Sitemap location (add once you have a sitemap)
+# Sitemap: https://thegoodsitter.com/sitemap.xml
+
+# Specific disallow rules can be added here if needed
+# Disallow: /admin/
