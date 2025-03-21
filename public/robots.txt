@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location (add once you have a sitemap)
-# Sitemap: https://thegoodsitter.com/sitemap.xml
+# Sitemap: https://thegoodsitter.care/sitemap.xml
 
 # Specific disallow rules can be added here if needed
 # Disallow: /admin/
